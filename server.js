@@ -10,6 +10,8 @@ const express       = require('express'),
     favicon         = require('serve-favicon'),
     
     router          = require('./routes/router'),
+    database        = require('./lib/database'),
+    seeder          = require('./lib/dbSeeder'),
     app             = express(),
     port            = 5005;
 
@@ -19,7 +21,7 @@ class Server {
         this.initViewEngine();
         this.initExpressMiddleWare();
      //   this.initCustomMiddleware();
-     //   this.initDbSeeder();
+        this.initDbSeeder();
         this.initRoutes();
         this.start();
     }
