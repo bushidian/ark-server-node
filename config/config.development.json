@@ -1,6 +1,6 @@
 {
     "databaseConfig": {
-        "host": "localhost",
+        "host": "192.168.1.116",
         "database": "customermanager"
     }
 }
