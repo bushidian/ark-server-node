@@ -71,10 +71,10 @@ class CustomersController {
                 customersRepo.insertCustomer(req.body, state, (err, customer) => {
                     if (err) {
                         console.log('*** customersRepo.insertCustomer error: ' + util.inspect(err));
-                        res.json({status: false, error: 'Insert failed', customer: null});
+                        res.json({status: false, error: 'Insert failed', data: null});
                     } else {
                         console.log('*** insertCustomer ok');
-                        res.json({ status: true, error: null, customer: customer });
+                        res.json({ status: true, error: null, data: customer });
                     }
                 });
             }
@@ -98,10 +98,10 @@ class CustomersController {
                 customersRepo.updateCustomer(req.params.id, req.body, state, (err, customer) => {
                     if (err) {
                         console.log('*** updateCustomer error: ' + util.inspect(err));
-                        res.json({ status: false, error: 'Update failed', customer: null });
+                        res.json({ status: false, error: 'Update failed', data: null });
                     } else {
                         console.log('*** updateCustomer ok');
-                        res.json({ status: true, error: null, customer: customer });
+                        res.json({ status: true, error: null, data: customer });
                     }
                 });
             }
